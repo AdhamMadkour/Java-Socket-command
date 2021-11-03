@@ -27,7 +27,10 @@ public class Server {
                         bufferedWriter.write(ip.getHostName());
                         bufferedWriter.newLine();
                         bufferedWriter.flush();
-                    } else System.out.println(msg);
+                    } else {
+                        msg = msg.substring(1);
+                        System.out.println(msg);
+                    }
                 }
             } catch (IOException e) {
                 e.printStackTrace();
